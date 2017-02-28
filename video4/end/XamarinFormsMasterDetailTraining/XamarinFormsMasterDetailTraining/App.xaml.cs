@@ -16,20 +16,20 @@ namespace XamarinFormsMasterDetailTraining
 			if (Device.Idiom == TargetIdiom.Desktop
 			   || Device.Idiom == TargetIdiom.Tablet)
 			{
-				await NavigationService.NavigateAsync("MasterDetailPageView/BaseNavigationPageView/DetailPageView");
+				await NavigationService.NavigateAsync("QuoteMasterDetailPageView/BaseNavigationPageView/QuoteDetailPageView");
 			}
 			else 
 			{
 				//assume it's phone and navigate clean
-				await NavigationService.NavigateAsync("BaseNavigationPageView/MasterPageView"); 
+				await NavigationService.NavigateAsync("BaseNavigationPageView/QuoteMasterPageView"); 
 			}
 		}
 
 		protected override void RegisterTypes()
 		{
-			Container.RegisterTypeForNavigation<MasterDetailPageView, MasterDetailPageViewModel>();
-			Container.RegisterTypeForNavigation<MasterPageView, MasterPageViewModel>();
-			Container.RegisterTypeForNavigation<DetailPageView, DetailPageViewModel>();
+			Container.RegisterTypeForNavigation<QuoteMasterDetailPageView, QuoteMasterDetailPageViewModel>();
+			Container.RegisterTypeForNavigation<QuoteMasterPageView, QuoteMasterPageViewModel>();
+			Container.RegisterTypeForNavigation<QuoteDetailPageView, QuoteDetailPageViewModel>();
 			Container.RegisterTypeForNavigation<BaseNavigationPageView, BaseNavigationPageViewModel>();
 		}
 	}

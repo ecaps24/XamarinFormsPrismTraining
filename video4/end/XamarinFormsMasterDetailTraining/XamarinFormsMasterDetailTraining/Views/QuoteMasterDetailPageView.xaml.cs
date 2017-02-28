@@ -2,9 +2,9 @@
 
 namespace XamarinFormsMasterDetailTraining.Views
 {
-	public partial class DetailPageView : ContentPage
+	public partial class QuoteMasterDetailPageView : MasterDetailPage
 	{
-		public DetailPageView()
+		public QuoteMasterDetailPageView()
 		{
 			InitializeComponent();
 		}

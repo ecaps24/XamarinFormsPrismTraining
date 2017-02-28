@@ -11,12 +11,20 @@ namespace XamarinFormsMasterDetailTraining.ViewModels
 	{
 		protected readonly INavigationService _navigationService;
 
+		private string _title;
+		public string Title
+		{
+			get { return _title; }
+			set { SetProperty(ref _title, value); }
+		}
+
 		public DelegateCommand<string> NavigateCommand { get; set; }
 
 		public BaseViewModel(INavigationService navigationService)
 		{
 			_navigationService = navigationService;
 			NavigateCommand = new DelegateCommand<string>(Navigate);
+			Title = string.Empty;
 		}
 
 		private async void Navigate(string name)

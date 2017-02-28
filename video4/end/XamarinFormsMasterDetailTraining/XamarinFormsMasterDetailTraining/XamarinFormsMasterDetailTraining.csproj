@@ -33,37 +33,40 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="Views\MasterPageView.xaml.cs">
-      <DependentUpon>MasterPageView.xaml</DependentUpon>
+    <Compile Include="Views\QuoteMasterPageView.xaml.cs">
+      <DependentUpon>QuoteMasterPageView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\MasterPageViewModel.cs" />
-    <Compile Include="Views\DetailPageView.xaml.cs">
-      <DependentUpon>DetailPageView.xaml</DependentUpon>
+    <Compile Include="ViewModels\QuoteMasterPageViewModel.cs" />
+    <Compile Include="Views\QuoteDetailPageView.xaml.cs">
+      <DependentUpon>QuoteDetailPageView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\DetailPageViewModel.cs" />
+    <Compile Include="ViewModels\QuoteDetailPageViewModel.cs" />
     <Compile Include="ViewModels\BaseNavigationPageViewModel.cs" />
     <Compile Include="Views\BaseNavigationPageView.xaml.cs">
       <DependentUpon>BaseNavigationPageView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\MasterDetailPageViewModel.cs" />
-    <Compile Include="Views\MasterDetailPageView.xaml.cs">
-      <DependentUpon>MasterDetailPageView.xaml</DependentUpon>
+    <Compile Include="ViewModels\QuoteMasterDetailPageViewModel.cs" />
+    <Compile Include="Views\QuoteMasterDetailPageView.xaml.cs">
+      <DependentUpon>QuoteMasterDetailPageView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\Quote.cs" />
+    <Compile Include="Repository\QuotesRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\MasterPageView.xaml">
+    <EmbeddedResource Include="Views\QuoteMasterPageView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DetailPageView.xaml">
+    <EmbeddedResource Include="Views\QuoteDetailPageView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BaseNavigationPageView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\MasterDetailPageView.xaml">
+    <EmbeddedResource Include="Views\QuoteMasterDetailPageView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -84,13 +87,13 @@
       <HintPath>..\packages\Xamarin.Forms.2.3.4.192-pre2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Prism">
-      <HintPath>..\packages\Prism.Core.6.3.0-pre1\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.dll</HintPath>
+      <HintPath>..\packages\Prism.Core.6.3.0-pre2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.dll</HintPath>
     </Reference>
     <Reference Include="Prism.Forms">
-      <HintPath>..\packages\Prism.Forms.6.3.0-pre1\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.Forms.dll</HintPath>
+      <HintPath>..\packages\Prism.Forms.6.3.0-pre2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Prism.Unity.Forms">
-      <HintPath>..\packages\Prism.Unity.Forms.6.3.0-pre1\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.Unity.Forms.dll</HintPath>
+      <HintPath>..\packages\Prism.Unity.Forms.6.3.0-pre2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.Unity.Forms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +102,10 @@
   <ItemGroup>
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
+    <Folder Include="Model\" />
+    <Folder Include="Events\" />
+    <Folder Include="Messages\" />
+    <Folder Include="Repository\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.192-pre2\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.192-pre2\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
