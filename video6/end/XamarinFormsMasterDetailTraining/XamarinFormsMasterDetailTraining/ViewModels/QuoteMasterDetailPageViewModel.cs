@@ -30,7 +30,7 @@ namespace XamarinFormsMasterDetailTraining.ViewModels
 		private async void DoAuthorQuoteNavigation(AuthorQuoteNavigationMessage message)
 		{
 			var parameter = new NavigationParameters($"id={message.AuthorId}");
-			await _navigationService.NavigateAsync("QuoteDetailPageView", parameter);	
+			await _navigationService.NavigateAsync("BaseNavigationPageView/QuoteDetailPageView", parameter);	
 		}
 	}
 }
